@@ -1,0 +1,151 @@
+Java Interview questions:
+=========================
+
+String is immutable why?
+
+String is a Class, DATA TYPE(Non-Primitive).
+With respect to JAVA it is also an object.
+
+String can be created in two ways:
+
+>>String literal (eg: String name="vignesh")
+>>By new keyword  (eg: String name=new String("eshwar")  )
+
+
+String constant pool: 
+
+ String name="vignesh"
+
+In Heap memory, String constant pool is there. It is used for memory saving
+
+When name variable is declared with a value(vignesh), a memory location is allocated in  String constant pool.
+
+String personName="vignesh"
+
+Again another variable(personName) is created with same value("vignesh"), the string literal searches in String constant pool, Whether same value is previously saved in String Constant Pool or not.
+If same value is saved, memory is not allocated, previously saved location is used.
+If not saved, new space is created.
+
+But when String created with New Keyword, each and every time, Space is created in HEAP MEMORY.
+
+******If String literal is created, it is stored only in STRING CONSTANT POOL.(IMPORTANT)
+*******Only for String literal, STRING CONSTANT POOL is allowed.(IMPORTANT)
+
+
+***************************************************************************************************************
+
+String Builder and String Buffer:
+==================================
+
+
+
+
+
+***************************************************************************************************************
+
+Different String predefined methods:
+====================================
+
+returns String variable:
+1.toupperCase
+2.toLowerCase
+
+returns char array:
+3.toCharArray()
+
+returns particular portion of String:
+4.substring(starting indexNo, ending indexNo-1);
+ 
+returns String of array:
+5.split()
+
+comparing two String values:
+6.equals
+7.equalsIgnoreCase
+
+for comparing the memory space:
+8.intern()
+
+Example:
+========
+
+String Literal:
+===============
+ String input1="vigneshwaran";
+
+ String input2="vigneshwaran";
+
+        System.out.println(input1.intern()==input2.intern());
+
+o/p=>true 
+
+(because, in String constant pool memory allocation for "vigneshwaran" memory is allocated only once. So both variable(input1, input2) pointing same memory location. 
+
+
+String:new Keyword:
+===================
+
+ String input1=new String("vigneshwaran");
+
+ String input2=new String("vigneshwaran");
+
+        System.out.println(input1.intern()==input2.intern());
+
+o/p=>false
+
+in heap memory for every new keyword, different memory is been allocated.
+
+====================================================================================================================== 
+
+for replacing characters in a string:
+9.replace(old char, new char)
+
+  String word="vigneshwaran";
+
+String g=word.replace('a','z');
+        System.out.println(g);
+
+o/p==>vigneshwzrzn
+
+=========================================================
+
+to remove white space on both sides of strings:
+10.trim()
+
+String name=" vignesh  ";
+
+name.trim();
+o/p=>vignesh
+
+white spaces are removed.
+=================================================== 
+
+to find length of String:
+11.length();
+
+String name="vignesh"
+
+name.length();
+
+o/p=>7
+=====================================================
+
+to Find the index no.
+12.indexOf(char or String);
+
+example 1:
+String word="vigneshwaran"; (first n==>index position:3)
+
+       int r=word.indexOf("n");
+        System.out.println(r);
+
+o/p=>3
+--------------------------------------
+13.LastIndexOf(); 
+
+String word="vigneshwaran";  (Last n==>index position:11)
+
+       int r=word.LastIndexOf("n");
+        System.out.println(r);
+
+o/p=>11
