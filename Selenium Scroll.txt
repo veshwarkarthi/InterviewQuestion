@@ -1,0 +1,38 @@
+For SCROLL OPERATION: JavaScriptExecutor INTERFACE is mainly used.  
+
+
+
+
+WebDriver login=new ChromeDriver();
+        login.manage().window().maximize();
+        login.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        login.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        login.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
+        login.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
+        login.findElement(By.xpath("//button[@type='submit']")).click();
+
+//To scroll the WebPage to last (Bottom of the page):
+=====================================================
+JavascriptExecutor js = (JavascriptExecutor) driver;
+//Scroll down till the bottom of the page
+js.executeScript("window.scrollBy(0,document.body.scrollHeight)"," ");
+
+windows.scrollBy(0,document.body.scrollHeight)      ==>important condition for scrolling to last content of the webPage.
+**************************************************************************************************************************
+
+//How to scroll down to an element in Selenium until it is visible:
+===================================================================
+//Locating element by link text and store in variable "Element"        		
+        WebElement Element = driver.findElement(By.linkText("Try Selenium Testing For Free"));
+
+        // Scrolling down the page till the element is found		
+        js.executeScript("arguments[0].scrollIntoView();", Element);
+
+
+
+arguments[0].scrollIntoView();      ==>important condition for scrolling to last content of the webPage.
+
+**************************************************************************************************************************
+By using Actions class we can go to the respective place we want.
+
+Actions ac=new Actions(Object);

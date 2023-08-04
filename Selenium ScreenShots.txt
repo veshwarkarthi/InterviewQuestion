@@ -1,0 +1,23 @@
+ScreenShots to be taken by Using Selenium (TakesScreenshot INTERFACE):
+======================================================================
+
+How to capture ScreenShot of Full Page?
+How to capture ScreenShot of Section Of Page?
+How to capture ScreenShot of Specific Element of the Page?
+
+How to capture ScreenShot of Full Page?
+
+MAVEN Dependency File needed:
+=============================
+ <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>1.5.4</version>
+</dependency>
+
+d-->Driver object reference variable.
+the file path to be given, for saving the screenshot photo(2nd line).
+Import Screenshot, AShot methods after loading the dependency in pom.xml
+
+Screenshot Screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(d);
+        ImageIO.write(Screenshot.getImage(), "jpg", new File("C:\\Users\\LENOVO\\Pictures\\Screenshots\\phot.jpg"));
