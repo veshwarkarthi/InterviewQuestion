@@ -1,0 +1,67 @@
+Android Debug Bridge(ADB):
+==========================
+
+Step 1: Go to===> (https://developer.android.com/tools/releases/platform-tools) for installing SDK file for accessing Android phone through Laptop.
+
+Step 2: Click this link====> (Download SDK Platform-Tools for Windows).
+
+Step 3: ZIP file is downloaded. 
+
+Step 4: Locate a space for ZIP and unZIP the file.
+
+Step 5: Set the path in "ENVIRONMENT VARIABLE" and save it.
+
+Step 6: Open command prompt and verify the ADB is working or not.
+
+
+	=>adb (enter adb in cmd, and click enter).
+	
+Step 7: Take Mobile phone, Go to>>Settings>>About Phone>>Detailed info and Spec>>Kernel version/Build version(tap it continuously, then DEVELOPER MODE will be enabled).
+
+Step 8: Go to ADDITIONAL SETTINGS>>DEVELOPER MODE/OPTIONS>>Enable USB Debugging option.
+
+Step 9: Connect the mobile with LAPTOP with DATA CABLE.  Allow permission for USB Debugging in Mobile phone. After that in already opened COMMAND PROMPT, again type,
+
+	=>adb devices. (If the mobile is enabled with USB debugging option), the device will be connected with ADB.
+
+Step 10: Sometimes, it may not connect. Again follow the above same steps. (Mobile to be connected to ADB installed in LAPTOP).
+
+Step 11:  Next, take all the package names(All the Application are stored in Package format), By using this command, 
+
+	=>adb shell pm list packages               
+
+*****BLOATWARE APK's: The Mobile application which comes with Mobile phone, Where the usage is very less by user, But the application size will be very high and consumes high memory.    Abbrevation: (APK's==>Application).
+
+Step 12: Copy all the package names from the COMMAND PROMPT and paste in Excel or Text file. Filter the Package w.r.t Application name(eg:whereismytrain, whasapp,appvault,etc.,).
+
+Step 13: copy the package name 
+
+	example:com.whereismytrain.android
+		com.google.android.youtube
+
+No need to copy [package:]
+
+Step 14: Enter this line =>adb uninstall [package_name]
+
+				=>adb uninstall com.whereismytrain.android
+				=>adb uninstall com.google.android.youtube
+
+Click Enter and the APP gets deleted in Mobile phone.
+
+Step 15: After deleting the application, Disconnect the connection between Mobile phone and ADB SDK, by using this command  		(SDK==>Software Development Kit)
+
+=>adb kill-server
+
+Example: commands:(for removing WhereisMyTrain app)
+====================================================
+1.open cmd
+2.adb                                 (check adb is available)
+3. adb devices                        (to check that devices connected to ADB SDK or not).
+4. adb shell pm list packages         (this command give all the application package name which is available in our Mobile).
+5.adb uninstall [package_name]        (mention the exact package in the square bracket and press enter.]
+6. adb kill-server                    (disconnect the connection found between Mobile phone and ADB SDK).
+7.Disable the USB debugging option, Developer Option.
+
+
+
+
