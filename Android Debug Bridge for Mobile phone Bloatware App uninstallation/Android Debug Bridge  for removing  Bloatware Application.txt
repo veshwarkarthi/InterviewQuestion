@@ -34,7 +34,7 @@ Step 11:  Next, take all the package names(All the Application are stored in Pac
 
 Step 12: Copy all the package names from the COMMAND PROMPT and paste in Excel or Text file. Filter the Package w.r.t Application name(eg:whereismytrain, whasapp,appvault,etc.,).
 
-Step 13: copy the package name 
+Step 13: copy the package name from APP INSPECTOR Application(Install it from Playstore).
 
 	example:com.whereismytrain.android
 		com.google.android.youtube
