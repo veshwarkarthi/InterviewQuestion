@@ -53,8 +53,15 @@ m.put("sakthi","zoho");
 Here also, the same principle where dupicates are not allowed for Key values.
 randomly the values are printed. 
 
-5) What is Iterator in Data structure?
+Important methods used in MAP Class:
+====================================
+=>keySet()  -->used for taking only the KEY (We can get in only in Set).
+=>values()  -->used for taking only the VALUE(We can get in only in Collections).
+=>entrySet() -->used for taking both KEY, VALUE pair.(We can get in only in Set).
 
+
+5) What is Iterator in Data structure?
+ ====>An Iterator is an object that can be used to loop through collections, like ArrayList and HashSet
 
 
 6) How to convert list of numbers from ARRAYLIST to TREESET in Colection of JAVA?
@@ -79,3 +86,10 @@ i/p get as arguments from User.
 
         System.out.println(s);
     }
+
+
+7) D/W USER STORY and USE CASE??
+
+USER STORY: A long description of functionality or feature which we required(from user perspective).
+
+USER CASE: Short description of functionality or feature which we required(from user perspective).
