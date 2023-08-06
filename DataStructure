@@ -1,0 +1,55 @@
+ArrayList, LinkedList: It stores all the values in INSERTED ORDER. And duplicate no's are not removed, it is stored.
+
+1) D/W ArrayList vs LinkedList? (or) Which is more reliable?
+
+Depending on the requirement, the usage many change.
+
+In ArrayList, time taken is high for storing element.              In LinkedList, time taken is less for storing element.
+In ArrayList, fetching a value is fast process.                     In LinkedList, fetching a value is slow process.
+
+
+2) how to declare ArrayList and Linked List:
+=========================================
+List<Integer> a=new ArrayList<>();                                
+****** ArrayList implements ClassList interface .
+
+
+List<Integer> a=new LinkedList<>();  
+********LinkedList Class implements List interface.
+
+3) What is set inteface?
+Works like List Interface, But it removes DUPLICATES and Keeps only UNIQUE VALUES.
+
+Under set, 3 types:
+=>HashSet  =>the numbers which are listed in HashSet will be sorted randomly, due to hashing concept.
+=>LinkedHashSet
+=>TreeSet  => Always all no's are sorted in Ascending order form. 
+
+how to declare Hashset:
+=========================================
+Set<Integer> a=new HashSet<>();                                
+****** HashSet Class implements Set interface .
+
+Set<Integer> a=new LinkedkedHashSet<>();    
+****** LinkedHashSet Class implements Set interface .
+
+
+Set<Integer> a=new TreeSet<>();          
+****** TreeSet Class implements Set interface .
+
+4)Map Interface:
+================
+HashMap Class implements Map Interface.
+HashMap stores values in Key Value pair.<K,V>
+
+for adding Key, Value in HashMap we go for "PUT" method.
+
+Map<String,String> m=new HashMap<>();
+m.put("vignesh","HCL");
+m.put("eshwar","vishwam");
+m.put("sakthi","zoho");
+
+Here also, the same principle where dupicates are not allowed for Key values.
+randomly the values are printed. 
+
+
