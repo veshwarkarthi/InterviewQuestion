@@ -21,9 +21,10 @@ List<Integer> a=new LinkedList<>();
 Works like List Interface, But it removes DUPLICATES and Keeps only UNIQUE VALUES.
 
 Under set, 3 types:
-=>HashSet  =>the numbers which are listed in HashSet will be sorted randomly, due to hashing concept.
-=>LinkedHashSet
-=>TreeSet  => Always all no's are sorted in Ascending order form. 
+********************
+=>HashSet  =>the numbers which are listed in HashSet will be sorted RANDOM order, due to hashing concept.
+=>LinkedHashSet  ==>behaves as like ArrayList(no's stored in INSERTED order), and Duplicates are removed.
+=>TreeSet  => Always all no's are sorted in ASCENDING order form. 
 
 how to declare Hashset:
 =========================================
@@ -52,4 +53,29 @@ m.put("sakthi","zoho");
 Here also, the same principle where dupicates are not allowed for Key values.
 randomly the values are printed. 
 
+5) What is Iterator in Data structure?
 
+
+
+6) How to convert list of numbers from ARRAYLIST to TREESET in Colection of JAVA?
+
+i/p get as arguments from User. 
+
+ List<Integer> numbers=new ArrayList<>();
+
+      for(int i=0;i<args.length;i++){
+          numbers.add(Integer.parseInt(args[i]));
+      }
+
+        System.out.println(numbers);
+
+      Iterator<Integer> c=numbers.iterator();
+
+      Set<Integer> s=new TreeSet<>();
+
+      while(c.hasNext()){
+          s.add(c.next());
+      }
+
+        System.out.println(s);
+    }
